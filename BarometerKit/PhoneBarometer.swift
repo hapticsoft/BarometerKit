@@ -15,11 +15,21 @@ import os
 public class PhoneBarometer : Barometer {
     
     // The altimeter used to monitor the barometric pressure changes.
-    private lazy var altimeter = CMAltimeter()
+    private var altimeter: CMAltimeter
     
     public var delegate: BarometerDelegate?
     
-    public var currentPressure: NSNumber = 0.0
+    public var currentPressure: NSNumber
+    
+    // For a type that is defined as public, the default initializer is considered internal.
+    // If you want a public type to be initializable with a no-argument initializer when used in another module,
+    // you must explicitly provide a public no-argument initializer yourself as part of the type’s definition.
+    // - SeeAlso: [Swift Access Control - Initializers](https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID19 "Initializers") 
+    public init() {
+        self.altimeter = CMAltimeter()
+        self.delegate = nil
+        self.currentPressure = 0.0
+    }
     
     public func start() -> Void {
         guard CMAltimeter.isRelativeAltitudeAvailable() else {
