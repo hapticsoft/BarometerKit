@@ -23,20 +23,6 @@
 			remoteGlobalIDString = 9B78170421123483003883D6;
 			remoteInfo = BarometerKit;
 		};
-		9B78175621123C99003883D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9B78175121123C97003883D6 /* BarometerDemo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9B78172E21123C95003883D6;
-			remoteInfo = BarometerDemo;
-		};
-		9B78175821123C99003883D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9B78175121123C97003883D6 /* BarometerDemo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9B78174221123C97003883D6;
-			remoteInfo = BarometerDemoTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +35,6 @@
 		9B78171F211234FF003883D6 /* BarometerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarometerDelegate.swift; sourceTree = "<group>"; };
 		9B781720211234FF003883D6 /* PhoneBarometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneBarometer.swift; sourceTree = "<group>"; };
 		9B781721211234FF003883D6 /* Barometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
-		9B78175121123C97003883D6 /* BarometerDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BarometerDemo.xcodeproj; path = BarometerDemo/BarometerDemo.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,20 +89,10 @@
 		9B78171221123484003883D6 /* BarometerKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				9B78175121123C97003883D6 /* BarometerDemo.xcodeproj */,
 				9B78171321123484003883D6 /* BarometerKitTests.swift */,
 				9B78171521123484003883D6 /* Info.plist */,
 			);
 			path = BarometerKitTests;
-			sourceTree = "<group>";
-		};
-		9B78175221123C97003883D6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9B78175721123C99003883D6 /* BarometerDemo.app */,
-				9B78175921123C99003883D6 /* BarometerDemoTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,12 +174,6 @@
 			mainGroup = 9B7816FB21123483003883D6;
 			productRefGroup = 9B78170621123484003883D6 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 9B78175221123C97003883D6 /* Products */;
-					ProjectRef = 9B78175121123C97003883D6 /* BarometerDemo.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				9B78170421123483003883D6 /* BarometerKit */,
@@ -212,23 +181,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		9B78175721123C99003883D6 /* BarometerDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = BarometerDemo.app;
-			remoteRef = 9B78175621123C99003883D6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9B78175921123C99003883D6 /* BarometerDemoTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = BarometerDemoTests.xctest;
-			remoteRef = 9B78175821123C99003883D6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9B78170321123483003883D6 /* Resources */ = {
