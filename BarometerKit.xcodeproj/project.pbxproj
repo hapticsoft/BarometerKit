@@ -13,6 +13,13 @@
 		9B781722211234FF003883D6 /* BarometerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B78171F211234FF003883D6 /* BarometerDelegate.swift */; };
 		9B781723211234FF003883D6 /* PhoneBarometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B781720211234FF003883D6 /* PhoneBarometer.swift */; };
 		9B781724211234FF003883D6 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B781721211234FF003883D6 /* Barometer.swift */; };
+		9BB4534C21125C8C007CA948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4534B21125C8C007CA948 /* AppDelegate.swift */; };
+		9BB4534E21125C8C007CA948 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4534D21125C8C007CA948 /* ViewController.swift */; };
+		9BB4535121125C8C007CA948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB4534F21125C8C007CA948 /* Main.storyboard */; };
+		9BB4535321125C8E007CA948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB4535221125C8E007CA948 /* Assets.xcassets */; };
+		9BB4535621125C8E007CA948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB4535421125C8E007CA948 /* LaunchScreen.storyboard */; };
+		9BB4535B21125CB1007CA948 /* BarometerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B78170521123484003883D6 /* BarometerKit.framework */; };
+		9BB4535C21125CB1007CA948 /* BarometerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B78170521123484003883D6 /* BarometerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +30,35 @@
 			remoteGlobalIDString = 9B78170421123483003883D6;
 			remoteInfo = BarometerKit;
 		};
+		9BB4535D21125CB1007CA948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B7816FC21123483003883D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B78170421123483003883D6;
+			remoteInfo = BarometerKit;
+		};
+		9BB4536021125D24007CA948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B7816FC21123483003883D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BB4534821125C8C007CA948;
+			remoteInfo = BarometerKitTestHost;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9BB4535F21125CB1007CA948 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9BB4535C21125CB1007CA948 /* BarometerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9B78170521123484003883D6 /* BarometerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BarometerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +70,13 @@
 		9B78171F211234FF003883D6 /* BarometerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarometerDelegate.swift; sourceTree = "<group>"; };
 		9B781720211234FF003883D6 /* PhoneBarometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneBarometer.swift; sourceTree = "<group>"; };
 		9B781721211234FF003883D6 /* Barometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
+		9BB4534921125C8C007CA948 /* BarometerKitTestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarometerKitTestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BB4534B21125C8C007CA948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BB4534D21125C8C007CA948 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9BB4535021125C8C007CA948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BB4535221125C8E007CA948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BB4535521125C8E007CA948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BB4535721125C8E007CA948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +95,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9BB4534621125C8C007CA948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BB4535B21125CB1007CA948 /* BarometerKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +111,7 @@
 			children = (
 				9B78170721123484003883D6 /* BarometerKit */,
 				9B78171221123484003883D6 /* BarometerKitTests */,
+				9BB4534A21125C8C007CA948 /* BarometerKitTestHost */,
 				9B78170621123484003883D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +121,7 @@
 			children = (
 				9B78170521123484003883D6 /* BarometerKit.framework */,
 				9B78170E21123484003883D6 /* BarometerKitTests.xctest */,
+				9BB4534921125C8C007CA948 /* BarometerKitTestHost.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +145,19 @@
 				9B78171521123484003883D6 /* Info.plist */,
 			);
 			path = BarometerKitTests;
+			sourceTree = "<group>";
+		};
+		9BB4534A21125C8C007CA948 /* BarometerKitTestHost */ = {
+			isa = PBXGroup;
+			children = (
+				9BB4534B21125C8C007CA948 /* AppDelegate.swift */,
+				9BB4534D21125C8C007CA948 /* ViewController.swift */,
+				9BB4534F21125C8C007CA948 /* Main.storyboard */,
+				9BB4535221125C8E007CA948 /* Assets.xcassets */,
+				9BB4535421125C8E007CA948 /* LaunchScreen.storyboard */,
+				9BB4535721125C8E007CA948 /* Info.plist */,
+			);
+			path = BarometerKitTestHost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,11 +204,31 @@
 			);
 			dependencies = (
 				9B78171121123484003883D6 /* PBXTargetDependency */,
+				9BB4536121125D24007CA948 /* PBXTargetDependency */,
 			);
 			name = BarometerKitTests;
 			productName = BarometerKitTests;
 			productReference = 9B78170E21123484003883D6 /* BarometerKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BB4534821125C8C007CA948 /* BarometerKitTestHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BB4535A21125C8E007CA948 /* Build configuration list for PBXNativeTarget "BarometerKitTestHost" */;
+			buildPhases = (
+				9BB4534521125C8C007CA948 /* Sources */,
+				9BB4534621125C8C007CA948 /* Frameworks */,
+				9BB4534721125C8C007CA948 /* Resources */,
+				9BB4535F21125CB1007CA948 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BB4535E21125CB1007CA948 /* PBXTargetDependency */,
+			);
+			name = BarometerKitTestHost;
+			productName = BarometerKitTestHost;
+			productReference = 9BB4534921125C8C007CA948 /* BarometerKitTestHost.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -161,6 +246,10 @@
 					};
 					9B78170D21123484003883D6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 9BB4534821125C8C007CA948;
+					};
+					9BB4534821125C8C007CA948 = {
+						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
@@ -170,6 +259,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9B7816FB21123483003883D6;
 			productRefGroup = 9B78170621123484003883D6 /* Products */;
@@ -178,6 +268,7 @@
 			targets = (
 				9B78170421123483003883D6 /* BarometerKit */,
 				9B78170D21123484003883D6 /* BarometerKitTests */,
+				9BB4534821125C8C007CA948 /* BarometerKitTestHost */,
 			);
 		};
 /* End PBXProject section */
@@ -194,6 +285,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BB4534721125C8C007CA948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BB4535621125C8E007CA948 /* LaunchScreen.storyboard in Resources */,
+				9BB4535321125C8E007CA948 /* Assets.xcassets in Resources */,
+				9BB4535121125C8C007CA948 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +319,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9BB4534521125C8C007CA948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BB4534E21125C8C007CA948 /* ViewController.swift in Sources */,
+				9BB4534C21125C8C007CA948 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -226,7 +336,36 @@
 			target = 9B78170421123483003883D6 /* BarometerKit */;
 			targetProxy = 9B78171021123484003883D6 /* PBXContainerItemProxy */;
 		};
+		9BB4535E21125CB1007CA948 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B78170421123483003883D6 /* BarometerKit */;
+			targetProxy = 9BB4535D21125CB1007CA948 /* PBXContainerItemProxy */;
+		};
+		9BB4536121125D24007CA948 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BB4534821125C8C007CA948 /* BarometerKitTestHost */;
+			targetProxy = 9BB4536021125D24007CA948 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BB4534F21125C8C007CA948 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BB4535021125C8C007CA948 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9BB4535421125C8E007CA948 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BB4535521125C8E007CA948 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9B78171721123484003883D6 /* Debug */ = {
@@ -418,6 +557,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarometerKitTestHost.app/BarometerKitTestHost";
 			};
 			name = Debug;
 		};
@@ -434,6 +574,45 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hapticsoft.BarometerKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarometerKitTestHost.app/BarometerKitTestHost";
+			};
+			name = Release;
+		};
+		9BB4535821125C8E007CA948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C79KT6Q3L6;
+				INFOPLIST_FILE = BarometerKitTestHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hapticsoft.BarometerKitTestHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9BB4535921125C8E007CA948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C79KT6Q3L6;
+				INFOPLIST_FILE = BarometerKitTestHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hapticsoft.BarometerKitTestHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +645,15 @@
 			buildConfigurations = (
 				9B78171D21123484003883D6 /* Debug */,
 				9B78171E21123484003883D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BB4535A21125C8E007CA948 /* Build configuration list for PBXNativeTarget "BarometerKitTestHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BB4535821125C8E007CA948 /* Debug */,
+				9BB4535921125C8E007CA948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
