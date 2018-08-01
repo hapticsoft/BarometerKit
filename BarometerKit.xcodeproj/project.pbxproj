@@ -10,6 +10,9 @@
 		9B78170F21123484003883D6 /* BarometerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B78170521123484003883D6 /* BarometerKit.framework */; };
 		9B78171421123484003883D6 /* BarometerKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B78171321123484003883D6 /* BarometerKitTests.swift */; };
 		9B78171621123484003883D6 /* BarometerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B78170821123484003883D6 /* BarometerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B781722211234FF003883D6 /* BarometerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B78171F211234FF003883D6 /* BarometerDelegate.swift */; };
+		9B781723211234FF003883D6 /* PhoneBarometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B781720211234FF003883D6 /* PhoneBarometer.swift */; };
+		9B781724211234FF003883D6 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B781721211234FF003883D6 /* Barometer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		9B78170E21123484003883D6 /* BarometerKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarometerKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B78171321123484003883D6 /* BarometerKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometerKitTests.swift; sourceTree = "<group>"; };
 		9B78171521123484003883D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B78171F211234FF003883D6 /* BarometerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarometerDelegate.swift; sourceTree = "<group>"; };
+		9B781720211234FF003883D6 /* PhoneBarometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneBarometer.swift; sourceTree = "<group>"; };
+		9B781721211234FF003883D6 /* Barometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 		9B78170721123484003883D6 /* BarometerKit */ = {
 			isa = PBXGroup;
 			children = (
+				9B781721211234FF003883D6 /* Barometer.swift */,
+				9B78171F211234FF003883D6 /* BarometerDelegate.swift */,
+				9B781720211234FF003883D6 /* PhoneBarometer.swift */,
 				9B78170821123484003883D6 /* BarometerKit.h */,
 				9B78170921123484003883D6 /* Info.plist */,
 			);
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					9B78170421123483003883D6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					9B78170D21123484003883D6 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B781724211234FF003883D6 /* Barometer.swift in Sources */,
+				9B781723211234FF003883D6 /* PhoneBarometer.swift in Sources */,
+				9B781722211234FF003883D6 /* BarometerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +352,7 @@
 		9B78171A21123484003883D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hapticsoft.BarometerKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +379,7 @@
 		9B78171B21123484003883D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +405,7 @@
 		9B78171D21123484003883D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C79KT6Q3L6;
 				INFOPLIST_FILE = BarometerKitTests/Info.plist;
@@ -407,6 +424,7 @@
 		9B78171E21123484003883D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C79KT6Q3L6;
 				INFOPLIST_FILE = BarometerKitTests/Info.plist;
