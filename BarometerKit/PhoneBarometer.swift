@@ -19,7 +19,7 @@ public class PhoneBarometer : Barometer {
     
     public var delegate: BarometerDelegate?
     
-    public var currentPressure: NSNumber
+    public var currentPressure: BarometricPressure?
     
     // For a type that is defined as public, the default initializer is considered internal.
     // If you want a public type to be initializable with a no-argument initializer when used in another module,
@@ -28,7 +28,7 @@ public class PhoneBarometer : Barometer {
     public init() {
         self.altimeter = CMAltimeter()
         self.delegate = nil
-        self.currentPressure = 0.0
+        self.currentPressure = nil
     }
     
     public func start() -> Void {
@@ -48,7 +48,7 @@ public class PhoneBarometer : Barometer {
             let pressureValue = data.pressure
             os_log("Pressure: %f kPa", log: OSLog.default, type: .debug,  pressureValue.floatValue)
             
-            self?.currentPressure = pressureValue
+            self?.currentPressure = BarometricPressure(kPa: pressureValue)
             self?.delegate?.pressureChanged(to: pressureValue)
         }
     }

@@ -15,17 +15,17 @@ import os
 
 class BarometerSimulator: Barometer {
     var delegate: BarometerDelegate?
-    var currentPressure: NSNumber = 0.0
+    var currentPressure: BarometricPressure?
     
     static private func randomPressure() -> NSNumber {
         return NSNumber(value: arc4random_uniform(100))
     }
     
     lazy var timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self](t) in
-        self?.currentPressure = BarometerSimulator.randomPressure()
+        self?.currentPressure = BarometricPressure(kPa: BarometerSimulator.randomPressure())
         
         DispatchQueue.main.async {
-            self?.delegate?.pressureChanged(to: (self?.currentPressure)!)
+            self?.delegate?.pressureChanged(to: (self?.currentPressure?.kPa)!)
         }
     }
     

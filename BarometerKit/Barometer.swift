@@ -14,7 +14,7 @@ public protocol Barometer {
     var delegate: BarometerDelegate? { get set }
     
     /// The most recent reading of the iPhone's barometer sensor.
-    var currentPressure: NSNumber { get }
+    var currentPressure: BarometricPressure? { get }
     
     /// Starts monitoring the barometric pressure and calling the delegate with new pressure values.
     func start() -> Void
