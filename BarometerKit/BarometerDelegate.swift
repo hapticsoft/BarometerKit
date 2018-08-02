@@ -16,6 +16,6 @@ public protocol BarometerDelegate {
     /// Tells the delegate that the barometric pressure has changed.
     ///
     /// - Parameter to: new barometric pressure value.
-    func pressureChanged(to: NSNumber)
+    func pressureChanged(to newValue: BarometricPressure)
 }
 

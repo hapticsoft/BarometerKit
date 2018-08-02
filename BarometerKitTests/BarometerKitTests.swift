@@ -25,7 +25,7 @@ class BarometerSimulator: Barometer {
         self?.currentPressure = BarometricPressure(kPa: BarometerSimulator.randomPressure())
         
         DispatchQueue.main.async {
-            self?.delegate?.pressureChanged(to: (self?.currentPressure?.kPa)!)
+            self?.delegate?.pressureChanged(to: (self?.currentPressure)!)
         }
     }
     
@@ -45,11 +45,11 @@ class BarometerSimulator: Barometer {
 }
 
 class BarometerDelegateTester : BarometerDelegate {
-    var callbackClosure : ((_ pressure: NSNumber) -> Void)?
+    var callbackClosure : ((_ pressure: BarometricPressure) -> Void)?
     
-    func pressureChanged(to: NSNumber) {
-        os_log("BarometerDelegateTester.pressureChanged(to: %f)", log: OSLog.default, type: .debug, to.floatValue)
-        callbackClosure?(to)
+    func pressureChanged(to newValue: BarometricPressure) {
+        os_log("BarometerDelegateTester.pressureChanged(to: %f)", log: OSLog.default, type: .debug,  newValue.kPa.floatValue)
+        callbackClosure?(newValue)
     }
 }
 

@@ -49,7 +49,7 @@ public class PhoneBarometer : Barometer {
             os_log("Pressure: %f kPa", log: OSLog.default, type: .debug,  pressureValue.floatValue)
             
             self?.currentPressure = BarometricPressure(kPa: pressureValue)
-            self?.delegate?.pressureChanged(to: pressureValue)
+            self?.delegate?.pressureChanged(to: (self?.currentPressure)!)
         }
     }
     
