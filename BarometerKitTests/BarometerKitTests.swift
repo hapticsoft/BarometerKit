@@ -46,13 +46,10 @@ class BarometerSimulator: Barometer {
 
 class BarometerDelegateTester : BarometerDelegate {
     var callbackClosure : ((_ pressure: NSNumber) -> Void)?
-    var pressureChangedWasCalled = false
-    var lastPressureReading : NSNumber = 0
     
     func pressureChanged(to: NSNumber) {
-        pressureChangedWasCalled = true
-        lastPressureReading = to
-        callbackClosure?(lastPressureReading)
+        os_log("BarometerDelegateTester.pressureChanged(to: %f)", log: OSLog.default, type: .debug, to.floatValue)
+        callbackClosure?(to)
     }
 }
 
@@ -96,7 +93,6 @@ class BarometerKitTests: XCTestCase {
         expectation.expectedFulfillmentCount = 2
         
         barometerDelegate?.callbackClosure = { pressure in
-            os_log("Pressure=%f", log: OSLog.default, type: .error, pressure.floatValue)
             expectation.fulfill()
         }
         var barometer = BarometerTestFactory().create()

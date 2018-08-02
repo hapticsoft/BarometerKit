@@ -46,8 +46,7 @@ public class PhoneBarometer : Barometer {
                 return
             }
             let pressureValue = data.pressure
-            let altitudeValue = data.relativeAltitude
-            os_log("altitude: %f, pressure: %f", log: OSLog.default, type: .debug, altitudeValue.floatValue, pressureValue.floatValue)
+            os_log("Pressure: %f kPa", log: OSLog.default, type: .debug,  pressureValue.floatValue)
             
             self?.currentPressure = pressureValue
             self?.delegate?.pressureChanged(to: pressureValue)
