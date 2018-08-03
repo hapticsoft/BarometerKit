@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9B07FF29211495F80062A179 /* BarometerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE96ADA2114949400D94929 /* BarometerKit.framework */; };
 		9B07FF2A211495F80062A179 /* BarometerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE96ADA2114949400D94929 /* BarometerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B07FF2F21149A7F0062A179 /* SimulatorBarometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07FF2E21149A7F0062A179 /* SimulatorBarometer.swift */; };
+		9B07FF3121149B270062A179 /* BarometerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07FF3021149B270062A179 /* BarometerFactory.swift */; };
 		9BE96AC221139D1500D94929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE96AC121139D1500D94929 /* AppDelegate.swift */; };
 		9BE96AC421139D1500D94929 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE96AC321139D1500D94929 /* ViewController.swift */; };
 		9BE96AC721139D1500D94929 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE96AC521139D1500D94929 /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B07FF2E21149A7F0062A179 /* SimulatorBarometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorBarometer.swift; sourceTree = "<group>"; };
+		9B07FF3021149B270062A179 /* BarometerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometerFactory.swift; sourceTree = "<group>"; };
 		9BE96ABE21139D1500D94929 /* BarometerKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarometerKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE96AC121139D1500D94929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BE96AC321139D1500D94929 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				9BE96AC821139D1900D94929 /* Assets.xcassets */,
 				9BE96ACA21139D1900D94929 /* LaunchScreen.storyboard */,
 				9BE96ACD21139D1900D94929 /* Info.plist */,
+				9B07FF2E21149A7F0062A179 /* SimulatorBarometer.swift */,
+				9B07FF3021149B270062A179 /* BarometerFactory.swift */,
 			);
 			path = BarometerKitDemo;
 			sourceTree = "<group>";
@@ -228,6 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BE96AC421139D1500D94929 /* ViewController.swift in Sources */,
+				9B07FF2F21149A7F0062A179 /* SimulatorBarometer.swift in Sources */,
+				9B07FF3121149B270062A179 /* BarometerFactory.swift in Sources */,
 				9BE96AC221139D1500D94929 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
