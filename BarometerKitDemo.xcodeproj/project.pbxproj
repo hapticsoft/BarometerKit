@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B07FF29211495F80062A179 /* BarometerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE96ADA2114949400D94929 /* BarometerKit.framework */; };
+		9B07FF2A211495F80062A179 /* BarometerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE96ADA2114949400D94929 /* BarometerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9BE96AC221139D1500D94929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE96AC121139D1500D94929 /* AppDelegate.swift */; };
 		9BE96AC421139D1500D94929 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE96AC321139D1500D94929 /* ViewController.swift */; };
 		9BE96AC721139D1500D94929 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE96AC521139D1500D94929 /* Main.storyboard */; };
@@ -15,6 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9B07FF2B211495F80062A179 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BE96AD32114949400D94929 /* BarometerKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B78170421123483003883D6;
+			remoteInfo = BarometerKit;
+		};
 		9BE96AD92114949400D94929 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9BE96AD32114949400D94929 /* BarometerKit.xcodeproj */;
@@ -38,6 +47,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9B07FF2D211495F80062A179 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9B07FF2A211495F80062A179 /* BarometerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9BE96ABE21139D1500D94929 /* BarometerKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarometerKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE96AC121139D1500D94929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B07FF29211495F80062A179 /* BarometerKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,10 +134,12 @@
 				9BE96ABA21139D1500D94929 /* Sources */,
 				9BE96ABB21139D1500D94929 /* Frameworks */,
 				9BE96ABC21139D1500D94929 /* Resources */,
+				9B07FF2D211495F80062A179 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9B07FF2C211495F80062A179 /* PBXTargetDependency */,
 			);
 			name = BarometerKitDemo;
 			productName = BarometerKitDemo;
@@ -207,6 +233,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B07FF2C211495F80062A179 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BarometerKit;
+			targetProxy = 9B07FF2B211495F80062A179 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9BE96AC521139D1500D94929 /* Main.storyboard */ = {
@@ -345,6 +379,7 @@
 		9BE96AD121139D1900D94929 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C79KT6Q3L6;
@@ -363,6 +398,7 @@
 		9BE96AD221139D1900D94929 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C79KT6Q3L6;
