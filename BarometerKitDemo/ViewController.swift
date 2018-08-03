@@ -10,11 +10,7 @@ import UIKit
 import os
 import BarometerKit
 
-class ViewController: UIViewController, BarometerDelegate {
-    func pressureChanged(to newValue: BarometricPressure) {
-        kPaValueLabel.text  = formatter.string(from: newValue.kPa)
-        inHgValueLabel.text = formatter.string(from: newValue.inHg)
-    }
+class ViewController: UIViewController {
     
     var barometer = BarometerFactory().create()
     let formatter = NumberFormatter()
@@ -28,8 +24,10 @@ class ViewController: UIViewController, BarometerDelegate {
         formatter.minimumFractionDigits = 6
         kPaValueLabel.text = ""
         inHgValueLabel.text = ""
-        barometer.delegate = self
-        barometer.start()
+        barometer.start() { [weak self] (newValue) in
+            self?.kPaValueLabel.text  = self?.formatter.string(from: newValue.kPa)
+            self?.inHgValueLabel.text = self?.formatter.string(from: newValue.inHg)
+        }
     }
 
     override func didReceiveMemoryWarning() {
