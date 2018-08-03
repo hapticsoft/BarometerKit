@@ -17,8 +17,6 @@ public class PhoneBarometer : Barometer {
     // The altimeter used to monitor the barometric pressure changes.
     private var altimeter: CMAltimeter
     
-    public var delegate: BarometerDelegate?
-    
     public var currentPressure: BarometricPressure?
     
     // For a type that is defined as public, the default initializer is considered internal.
@@ -27,11 +25,11 @@ public class PhoneBarometer : Barometer {
     // - SeeAlso: [Swift Access Control - Initializers](https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID19 "Initializers") 
     public init() {
         self.altimeter = CMAltimeter()
-        self.delegate = nil
         self.currentPressure = nil
     }
     
-    public func start() -> Void {
+    public func start(onPressureChange pressureChanged: @escaping (_ newValue: BarometricPressure) -> Void) {
+        
         guard CMAltimeter.isRelativeAltitudeAvailable() else {
             os_log("Altimeter is not supported on this device.", log: OSLog.default, type: .info)
             return
@@ -49,7 +47,7 @@ public class PhoneBarometer : Barometer {
             os_log("Pressure: %f kPa", log: OSLog.default, type: .debug,  pressureValue.floatValue)
             
             self?.currentPressure = BarometricPressure(kPa: pressureValue)
-            self?.delegate?.pressureChanged(to: (self?.currentPressure)!)
+            pressureChanged((self?.currentPressure)!)
         }
     }
     

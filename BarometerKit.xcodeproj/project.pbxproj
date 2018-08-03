@@ -10,7 +10,6 @@
 		9B78170F21123484003883D6 /* BarometerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B78170521123484003883D6 /* BarometerKit.framework */; };
 		9B78171421123484003883D6 /* BarometerKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B78171321123484003883D6 /* BarometerKitTests.swift */; };
 		9B78171621123484003883D6 /* BarometerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B78170821123484003883D6 /* BarometerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B781722211234FF003883D6 /* BarometerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B78171F211234FF003883D6 /* BarometerDelegate.swift */; };
 		9B781723211234FF003883D6 /* PhoneBarometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B781720211234FF003883D6 /* PhoneBarometer.swift */; };
 		9B781724211234FF003883D6 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B781721211234FF003883D6 /* Barometer.swift */; };
 		9BB4534C21125C8C007CA948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4534B21125C8C007CA948 /* AppDelegate.swift */; };
@@ -68,7 +67,6 @@
 		9B78170E21123484003883D6 /* BarometerKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarometerKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B78171321123484003883D6 /* BarometerKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometerKitTests.swift; sourceTree = "<group>"; };
 		9B78171521123484003883D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B78171F211234FF003883D6 /* BarometerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarometerDelegate.swift; sourceTree = "<group>"; };
 		9B781720211234FF003883D6 /* PhoneBarometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneBarometer.swift; sourceTree = "<group>"; };
 		9B781721211234FF003883D6 /* Barometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
 		9BB4534921125C8C007CA948 /* BarometerKitTestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarometerKitTestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				9B781721211234FF003883D6 /* Barometer.swift */,
-				9B78171F211234FF003883D6 /* BarometerDelegate.swift */,
 				9B781720211234FF003883D6 /* PhoneBarometer.swift */,
 				9B78170821123484003883D6 /* BarometerKit.h */,
 				9B78170921123484003883D6 /* Info.plist */,
@@ -311,7 +308,6 @@
 				9BE96AB421138D0100D94929 /* BarometricPressure.swift in Sources */,
 				9B781724211234FF003883D6 /* Barometer.swift in Sources */,
 				9B781723211234FF003883D6 /* PhoneBarometer.swift in Sources */,
-				9B781722211234FF003883D6 /* BarometerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

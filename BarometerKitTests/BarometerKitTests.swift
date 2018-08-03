@@ -14,42 +14,34 @@ import os
 
 
 class BarometerSimulator: Barometer {
-    var delegate: BarometerDelegate?
+
     var currentPressure: BarometricPressure?
     
     static private func randomPressure() -> NSNumber {
         return NSNumber(value: arc4random_uniform(100))
     }
     
-    lazy var timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self](t) in
-        self?.currentPressure = BarometricPressure(kPa: BarometerSimulator.randomPressure())
-        
-        DispatchQueue.main.async {
-            self?.delegate?.pressureChanged(to: (self?.currentPressure)!)
-        }
-    }
+    var timer: Timer?
     
-    func start() {
+    func start(onPressureChange pressureChanged: @escaping (BarometricPressure) -> Void) {
         
         // Start background task that calls the delegate at fixed intervals.
-        
-        self.timer.fire()
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self](t) in
+            self?.currentPressure = BarometricPressure(kPa: BarometerSimulator.randomPressure())
+            
+            DispatchQueue.main.async {
+                pressureChanged((self?.currentPressure)!)
+            }
+        }
+
+        self.timer?.fire()
     }
     
     func stop() {
         
         // Terminate the background task
-        self.timer.invalidate()
+        self.timer?.invalidate()
         
-    }
-}
-
-class BarometerDelegateTester : BarometerDelegate {
-    var callbackClosure : ((_ pressure: BarometricPressure) -> Void)?
-    
-    func pressureChanged(to newValue: BarometricPressure) {
-        os_log("BarometerDelegateTester.pressureChanged(to: %f)", log: OSLog.default, type: .debug,  newValue.kPa.floatValue)
-        callbackClosure?(newValue)
     }
 }
 
@@ -76,15 +68,11 @@ class BarometerTestFactory {
 
 class BarometerKitTests: XCTestCase {
     
-    var barometerDelegate: BarometerDelegateTester?
-    
     override func setUp() {
         super.setUp()
-        barometerDelegate = BarometerDelegateTester()
     }
     
     override func tearDown() {
-        barometerDelegate = nil
         super.tearDown()
     }
 
@@ -92,12 +80,11 @@ class BarometerKitTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Barometer Delegate method pressureChanged should be called at least 2 times.")
         expectation.expectedFulfillmentCount = 2
         
-        barometerDelegate?.callbackClosure = { pressure in
+        let barometer = BarometerTestFactory().create()
+        barometer.start() { newValue in
+            os_log("testBarometerDelegatePressureChanged: %f", log: OSLog.default, type: .debug,  newValue.kPa.floatValue)
             expectation.fulfill()
         }
-        var barometer = BarometerTestFactory().create()
-        barometer.delegate = barometerDelegate
-        barometer.start()
         
         // Wait until the expectation is fulfilled, with a timeout of 60 seconds.
         wait(for: [expectation], timeout: 60.0)

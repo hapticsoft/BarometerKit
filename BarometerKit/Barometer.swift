@@ -9,15 +9,12 @@
 import Foundation
 
 /// Monitor changes to the barometric pressure and notify the delegate of said changes.
-public protocol Barometer {
-    /// The delegate that will be called with the barometric pressure data.
-    var delegate: BarometerDelegate? { get set }
-    
+public protocol Barometer {    
     /// The most recent reading of the iPhone's barometer sensor.
     var currentPressure: BarometricPressure? { get }
     
-    /// Starts monitoring the barometric pressure and calling the delegate with new pressure values.
-    func start() -> Void
+    /// Starts monitoring the barometric pressure and call the pressureChanged closure with new pressure values.
+    func start(onPressureChange pressureChanged: @escaping (BarometricPressure) -> Void) -> Void
     
     /// Stops monitoring the barometric pressure and stops calling the delegate with new pressure values.
     func stop() -> Void
