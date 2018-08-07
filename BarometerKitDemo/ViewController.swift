@@ -17,6 +17,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var kPaValueLabel: UILabel!
     @IBOutlet weak var inHgValueLabel: UILabel!
+    @IBOutlet weak var hPaValueLabel: UILabel!
+    @IBOutlet weak var mBarValueLabel: UILabel!
+    @IBOutlet weak var mmHgValueLabel: UILabel!
+    @IBOutlet weak var torrValueLabel: UILabel!
+    @IBOutlet weak var atmValueLabel: UILabel!
+    @IBOutlet weak var psiValueLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +33,12 @@ class ViewController: UIViewController {
         barometer.start() { [weak self] (newValue) in
             self?.kPaValueLabel.text  = self?.formatter.string(from: newValue.kPa)
             self?.inHgValueLabel.text = self?.formatter.string(from: newValue.inHg)
+            self?.hPaValueLabel.text = self?.formatter.string(from: newValue.hPa)
+            self?.mBarValueLabel.text = self?.formatter.string(from: newValue.mBar)
+            self?.mmHgValueLabel.text = self?.formatter.string(from: newValue.mmHg)
+            self?.torrValueLabel.text = self?.formatter.string(from: newValue.torr)
+            self?.atmValueLabel.text = self?.formatter.string(from: newValue.atm)
+            self?.psiValueLabel.text = self?.formatter.string(from: newValue.psi)
         }
     }
 
