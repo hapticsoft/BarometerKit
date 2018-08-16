@@ -12,20 +12,23 @@ Simple framework to access the iPhone barometric pressure sensor
 ```swift
 import BarometerKit
 
-var barometer = = PhoneBarometer()
+let barometer = = PhoneBarometer()
 
+barometer.start() { newValue in
+    print("Barometric pressure changed:(\newValue.kPa.floatValue)")
+}
 
 
 ```
 
 ## Requirements
 
-- iOS 8.0+
-- Xcode 8 (Swift 3.0)
+- iOS 11.0+
+- Xcode 9 (Swift 4.0)
 
 ## Installation
 
-LicensingViewController is available through [Carthage](https://github.com/Carthage/Carthage). To install
+BarometerKit is available through [Carthage](https://github.com/Carthage/Carthage). To install
 it, simply add the following line to your Cartfile:
 
 ```ruby
