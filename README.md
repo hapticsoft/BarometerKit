@@ -33,11 +33,3 @@ it, simply add the following line to your Cartfile:
 
 ```ruby
 github "hapticsoft/BarometerKit"
-```
-
-Then run `carthage update`.
-
-
-## License
-
-LicensingViewController is available under the MIT license. See the LICENSE file for more info.
