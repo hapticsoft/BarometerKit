@@ -44,7 +44,7 @@ public class PhoneBarometer : Barometer {
                 return
             }
             let pressureValue = data.pressure
-            os_log("Pressure: %f kPa", log: OSLog.default, type: .debug,  pressureValue.floatValue)
+            // os_log("Pressure: %f kPa", log: OSLog.default, type: .debug,  pressureValue.floatValue)
             
             self?.currentPressure = BarometricPressure(kPa: pressureValue)
             pressureChanged((self?.currentPressure)!)
