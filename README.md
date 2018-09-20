@@ -1,7 +1,7 @@
 # BarometerKit
 
 ![Version](https://img.shields.io/github/tag/hapticsoft/BarometerKit.svg)
-![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
 ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
 ![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)
 
